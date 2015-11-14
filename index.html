@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <link rel="shortcut icon" href="davidloiweb.png" type="image/x-icon" />
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="navbar-static-top.css" rel="stylesheet">
+    <link href="bootstrap/css/styles.css" rel="stylesheet"/>
+    
+      
+
+	<script>
+    var jumboHeight = $('.jumbotron').outerHeight();
+		function parallax(){
+    	var scrolled = $(window).scrollTop();
+    	$('.bg').css('height', (jumboHeight-scrolled) + 'px');
+		}
+
+	$(window).scroll(function(e){
+    parallax();
+	});
+
+	</script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
+ 
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="bootstrap/js/npm.js"></script>
+      
+    <script src="Roulette.js" type="text/javascript"></script>
+
+    <script>
+      $('.dropdown').on('show.bs.dropdown', function(e){
+    	$(this).find('.dropdown-menu').first().stop(true, true).slideDown();
+  		});
+
+  // ADD SLIDEUP ANIMATION TO DROPDOWN //
+  	$('.dropdown').on('hide.bs.dropdown', function(e){
+    $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
+  	});
+
+  	</script>
+
+	<style>
+h1(max-height: 200px){
+		color: white;
+        font-size: 400px;
+		font-family: 'Arial';
+	}
+
+h2{
+		color:#D19138;
+		font-family: 'Arial';
+
+	}
+
+h3{
+		color: #D19138;
+		font-family: 'Arial';
+		font-size:150%;
+	}
+
+h4{
+		color: #D19138;
+		font-family: 'Arial';
+	}
+
+p1{
+        color:#D19138;
+        font-family: 'Arial';
+    }
+    
+p2{
+        color: #D19138;
+        font-family: 'Arial';
+        padding-right: 5px;
+    }
+p3{
+    text-align-last: center;
+    color: white;
+    font-family: 'Arial';
+    font-size: 40px;
+}
+
+li{
+    color: #D19138;
+    font-family: 'Arial';
+}
+    
+	</style>
+
+
+
+<title>Pro/g/ramming Roulette</title>
+
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        
+    	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+    		<span class="sr-only">Toggle navigation</span>
+        	<span class="icon-bar"></span>
+        	<span class="icon-bar"></span>
+        	<span class="icon-bar"></span>
+ 		</button>
+      <a class="navbar-brand" href="index.html">
+      	<p1>Pro/g/ramming Roulette</p1>
+      </a>
+    </div>
+      
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+     
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li>
+            <a href="#CHALLENGE">
+            <p2> CHALLENGE </p2>
+            </a>
+
+        </li>
+          
+        <li>
+            <a href="#LANGUAGE">
+            <p2> LANGUAGE</p2>
+            </a>
+        </li>
+          
+        <li>
+            <a href="#GUIDE">
+            <p2> How-To-Guide</p2>
+            </a>
+        </li>
+          
+        <li>
+          <a href="#FAQ">
+            <p2> FAQ </p2>
+          </a>
+        </li>
+		<li>
+            <a href="#Contact">
+            <p2>Contact</p2>
+            </a>
+		</li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+</head>
+
+
+
+<body>
+
+<div class="bg"></div> <!-- Controls the main page, Could be used to insert a background picture + transparency -->
+
+<div class="jumbotron">
+  <div class="container">
+  	<div class="row">
+  		<div class="col-md-12"> 
+            
+  			<center>
+                <h1>Programming Challenges</h1>
+                <h2>"Test Your Skills"</h2>
+  			</center>
+  	</div>
+  </div>
+</div>
+</div>
+
+
+
+	<div class="container">
+        <div class="row">
+		<div class="panel panel-default">
+  			<div class="panel-body">
+                <h2 align=center id="CHALLENGE" >Spin For Challenges</h2>
+                                    <a id = "LANGUAGE"></a>
+                <div>
+                        <center>
+                        <p3 align=center id="demo"></p3>
+                        </center>
+                </div>
+    			<div>
+                    <div>
+                    <center>
+                            <button type="button" class="btn btn-inverse" onclick="PROGROLL()">Spin</button>
+                    </center>
+                    </div>
+                </div>
+
+
+
+
+                    <h2 align=center id="LANGUAGE">Spin for Language</h2>
+                                <a id ="GUIDE"></a>
+                    <div>
+                        <center>
+                        <p3 align="center" id="LANG"></p3>
+                        </center>
+                    </div>
+                    <div>
+                                <div>
+                                    <center>
+                                        <button type="button" class="btn btn-inverse" onclick="LANGROLL()">Spin</button>
+                                    </center>
+                                </div>
+                    </div>
+
+                
+                
+                    <p>
+                         <center>
+                        <h2>How-to Guide</h2>
+                        </center>
+                        
+                    <ol start="0">
+                    
+                        <li>Set up a reposity</li>
+                            <p> git init should do the job early and push and update code often.</p>
+                        <li>Understand the problem</li>
+                            <p>  Use <i>Generally Useful Resources</i> to find out more information about what your're facing.  If you need, use paper, draw diagrams, bite pencils.
+                            <br>
+                            <br>If the problem seems too difficult, try to simplify it, find a special case that may be easier to design and implement.  If it seems too easy, generalise, invent more complicated variations, perhaps try to combine with other problems.
+                            </p>
+                        <li>Implement</li>
+                            <p>  Start with whatever language you know best or feel most confortable with.  If the problem is easy, pick a language you've never used before or one that you don't know too well yet.  Don't be afraid to write ugly or nonidiomatic code as long as understand what's going on.  You can clear up the mess later.</p>
+                        <li>Test</li>
+                            <p>  Write tests that check both the ordinary and the exceptional cases of your program.  Compile/interpret/eval whatever you've written and run the tests.  Find bugs, fix them and repeat.  Again, commit often lest your progress disappear into the abyss.</p>
+                        <li>Reimplement</li>
+                            <p>  Now that you have a reference implementation, you can go wild.  Reimplement the task in different language this time, perhaps the one you've been meaning to learn since years ago.  Try to achieve the same outcome using different techniques, use different idioms.  Try to make the code as short as possible or the contrary.</p>
+                        <li>Rules</li>
+                            <ol start = "0">
+                                <li>No stealing of other's people work, only use them as references.</li>
+                                <li>Spin as much as you like, but remember to spin for the "initative."</li>
+                                <li>Breaks are allowed, Quitting is not.</li>
+                                <li>Share your work, no point in hoarding your genius.</li>
+                            </ol>
+                        <li> <i>Generally Useful Resources</i></li>
+                            <ol>
+                                <li><a href="http://Google.com" target="_blank">Google</a></li>
+                                <li><a href="http://wikipedia.com" target="_blank">Wikipedia</a></li>
+                                <li><a href="http://stackoverflow.com" target="_blank_">Stack Overflow</a></li>
+                                <li><a href="http://codeacademy.com" target="_blank">codeacademy.com</a></li>
+                                <li><a href="http://github.com" target="_blank">github.com</a></li>
+                                <li><a href="http://rosettacode.org" target="_blank">rosettacode.org</a></li>
+                                <a id="FAQ"></a>
+                        </ol>
+                        
+                    </ol>
+                
+                    <p>
+                        <center>
+                        <h2>FAQ</h2>
+                        </center>
+                        <ol start="0">
+                            
+                        <li>Can I make up my own challenges and add them to the list of challenges?</li>
+                            <p> Yes, as long as you email me the challenges, and after evaluating the them, I will add it to the list.</p>
+                        <li>How many challenges are there?</li>
+                            <p> As of now, I have stored about 100 programming challenges for the roulette wheel, but I will be updating the list over time.
+                            </p>
+                        <li>Will I be able to see the full list of challenges?</li>
+                            <p>Yes, the website actually derived from a list of challenges that were created by another user, and so will be posted at the bottom of the site as a reference.</p>
+                        <li>I've already done most of the challenges from the list, and the spinner results in the same number of challenges I have already completed.</li>
+                            <p>Actually, that was to be expected, that's why I adding another spinner for different languages.  If you can do one thing in one language, you should be able to do it in another, or even complete the same challenge with a different technique.</p>
+                        <li>So, I guess until you update the list, I guess I will just have to keep on spinning.</li>
+                            <p>Yep, I guess so, but if you want more challenges please email me some ideas and maybe even donate if you've like.  It definitely helps increase the list.
+                            
+                            
+                            
+                            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank_">
+                                <input type="hidden" name="cmd" value="_s-xclick">
+                                <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+">
+                                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                            </form>                     
+                            </p>
+                        <li>Hey I'm a beginner programmer, should I be joining the roulette table with the big boys?</li>
+                            <p>Honestly, the challenges are geared towards any level, and it may take you more time than other people, but all the power to you if you want to dive into the deep end or jump into the fires of "programming."</p>
+                        <li id="Contact">How can I contact you?</li>
+                            <p>Simple, you can email me questions or anything else at JLDevOps@gmail.com</p>
+   
+                    </ol>
+
+                    </p>      
+                
+                
+          
+                </div>
+            
+            <img src="1436786185132.png" class="img-responsive" alt="Cinque Terre">
+            
+            
+            
+            
+            
+  			</div>
+		</div>
+    </div>
+    
+
+<nav class="navbar navbar-default navbar-fixed-bottom navbar-inverse">
+  <div class="container-fluid2">
+	<ul class="copyright">
+      <a class="copyright">
+        <p1>Created by JLDevOps © 2012-15 ON.THE.DL</p1>
+      </a>
+    </ul>
+  </div>
+</nav>
+</div>
+
+
+
+</body>
+
+</html>
